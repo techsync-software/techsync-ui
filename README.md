@@ -1,4 +1,6 @@
-# TechsyncUi
+# TechSync Software UI
+
+`Innovación y Tecnología Digital: Desarrollo de Software y Diseño Web`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
