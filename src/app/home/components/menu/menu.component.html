@@ -1,0 +1,56 @@
+<header [class.active]="isHeaderScrolled" class="header" data-header>
+  <div class="container">
+
+    <a href="#" class="logo">
+      <img src="/assets/logo/simbolo-Blanco.png" width="74" height="24" alt="techsyncsoft logo" class="logo-light">
+
+      <img src="/assets/logo/simbolo-Azul.png" width="74" height="24" alt="techsyncsoft logo" class="logo-dark">
+    </a>
+
+    <nav class="navbar" data-navbar [class.active]="isMenuOpen">
+
+      <div class="navbar-top">
+        <a href="#" class="logo">
+          <img src="/assets/logo/simbolo-Blanco.png" width="74" height="24" alt="techsyncsoft logo">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler (click)="toggleMenu()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+      <ul class="navbar-list">
+
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('inicio')">Inicio</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('nosotros')">Nosotros</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('proyectos')">Proyectos</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('footer')">Contactanos</a></li>
+
+      </ul>
+
+      <div class="wrapper">
+        <a href="mailto:info@techsyncsoft.com" class="contact-link"><i class="fa-regular fa-envelope"></i> Envíanos un correo</a> <br>
+
+        <a href="tel:8494577448" class="contact-link"><i class="fa-solid fa-mobile-screen"></i> Contacto</a>
+      </div>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="https://www.instagram.com/techsyncsoft?igsh=dTQ4ODk3amVxMTEz&utm_source=qr" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <button class="nav-open-btn" aria-label="open menu" data-nav-toggler (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="overlay" data-nav-toggler data-overlay *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+
+  </div>
+</header>
