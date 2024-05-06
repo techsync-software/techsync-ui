@@ -65,6 +65,9 @@ body.nav-active { overflow: hidden; }
   display: flex;
   align-items: center;
   gap: 12px;
+  :hover{
+    color: var(--green);
+  }
 }
 
 .social-link {
