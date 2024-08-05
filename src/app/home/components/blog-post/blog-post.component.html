@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<div class="blog-mt">
+  <div class="button-container">
+    <a class="custom-button" [routerLink]="['/blog']">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver a los Blogs
+    </a>
+  </div>
+  <div *ngIf="post" class="blog-post">
+    <div class="post-image-container">
+      <img [src]="post.image" alt="{{ post.title }}" class="post-image">
+    </div>
+    <div class="post-content">
+      <div class="post-share-buttons">
+        <button (click)="shareOnLinkedIn()"><i class="fa-brands fa-linkedin-in"></i></button>
+      </div>
+      <h1>{{ post.title }}</h1>
+      <div class="post-meta">
+        <span>{{ post.author }}</span>
+        <span>{{ post.date | date:'mediumDate' }}</span>
+      </div>
+      <p>{{ post.content }}</p>
+      <div class="post-interactions">
+        <div class="like-button" (click)="addLikes()">
+          <div class="heart" [class.liked]="isLiked"><i class="fa-regular fa-heart"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<app-footer></app-footer>

@@ -1,0 +1,184 @@
+.blog-mt {
+  margin-top: 7rem;
+}
+
+h1, p {
+  color: var(--dark-blue);
+}
+
+i {
+  color: var(--green);
+  font-size: medium;
+}
+
+.blog-post {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-image-container {
+  width: 100%;
+  max-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+.post-content {
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--green-20);
+}
+
+.post-content h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.post-interactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px var(--green-20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.heart::before {
+  font-size: 24px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.heart.liked {
+  transform: scale(1.3);
+  background-color: var(--dark-blue);
+  color: var(--green);
+}
+
+.heart.liked::before {
+  transform: scale(1.5);
+}
+
+.post-share-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.post-share-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 400px;
+  padding: 1rem;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+ color: var(--dark-blue);
+}
+
+.custom-button i {
+  margin-right: 8px;
+}
+
+
+@media (max-width: 768px) {
+  .post-content {
+    padding: 10px;
+  }
+
+  .post-content h1 {
+    font-size: 2em;
+  }
+
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-interactions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .like-button {
+    margin-bottom: 10px;
+  }
+
+  .post-share-buttons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-content h1 {
+    font-size: 1.5em;
+  }
+
+  .post-meta {
+    font-size: 0.8em;
+  }
+
+  .post-interactions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .like-button {
+    margin-bottom: 10px;
+  }
+}
