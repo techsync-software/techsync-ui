@@ -1,0 +1,25 @@
+<app-menu id="inicio"></app-menu>
+<div class="blog-main">
+  <div class="button-container">
+    <a class="custom-button" [routerLink]="['/']">
+      <i class="fa-solid fa-arrow-left"></i>
+      Volver al Inicio
+    </a>
+  </div>
+  <h3>Blogs</h3>
+  <h1 class="content-primary"></h1>
+  <div class="blog-list">
+    <div *ngFor="let post of posts" class="blog-item">
+      <img [src]="post.image" alt="{{ post.title }}">
+      <h2>{{ post.title }}</h2>
+      <p class="content">{{ post.preview | slice:0:100 }}...</p>
+      <div class="blog-meta">
+        <span>{{ post.author }}</span>
+        <span>{{ post.date | date:'mediumDate' }}</span>
+      </div>
+      <a [routerLink]="['/blog', post.id]" class="read-more">Leer <i class="fa-brands fa-readme"></i></a>
+    </div>
+  </div>
+</div>
+<br>
+<app-footer></app-footer>
