@@ -3,15 +3,16 @@
     {
       "id": 1,
       "title": "El Poder de la IA: Transformando el Aprendizaje y los Procesos",
+      "slug": "el-poder-de-la-ia-transformando-el-aprendizaje-y-los-procesos",
       "preview": "He escuchado a menudo preguntas como:",
       "content": "He escuchado a menudo preguntas como: \"¿Cómo podemos automatizar procesos?\", \"¿Cómo puedo llevar mi aprendizaje paso a paso?\", \"¿Cómo puedo programar para hacer tal cosa?\". También he oído a personas decir: \"No uso IA, no sé si funcione, no sé cómo usarla\".   Es crucial adaptarnos a los avances tecnológicos relacionados con la IA para lograr nuevas cosas cada día. La IA nos permite optimizar procesos empresariales, reduciendo pasos innecesarios y mejorando la eficiencia. Por ejemplo, un proceso que antes requería ocho pasos ahora puede completarse en cinco o incluso cuatro. Además, la IA puede ayudarnos a implementar patrones de diseño o desarrollar planes de negocio de manera más efectiva. Hoy en día, tenemos la capacidad de aprender en una semana lo que antes nos tomaba dos, siempre y cuando estemos dispuestos a aprender y a relacionarnos con la IA. La clave es saber qué preguntar y cómo hacerlo. Con la IA como compañera de aprendizaje, podemos crecer juntos y alcanzar nuevos niveles de conocimiento y eficiencia.",
       "image": "https://res.cloudinary.com/di7mwkzuh/image/upload/v1722824622/IA-BLOG_yrhr9o.webp",
       "author": "B.J",
+      "authorImage": "../../assets/logo/símbolo-azul-verde.png",
       "date": "2024-08-4"
     }
   ]
 }
-
 
 
 

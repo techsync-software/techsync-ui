@@ -1,9 +1,9 @@
 <app-menu></app-menu>
 <div class="blog-mt">
   <div class="button-container">
-    <a class="custom-button" [routerLink]="['/blog']">
+    <a class="custom-button" [routerLink]="['/']">
       <i class="fa-solid fa-arrow-left"></i>
-      Volver a los Blogs
+      Volver al inicio
     </a>
   </div>
   <div *ngIf="post" class="blog-post">
@@ -12,7 +12,9 @@
     </div>
     <div class="post-content">
       <div class="post-share-buttons">
-        <button (click)="shareOnLinkedIn()"><i class="fa-brands fa-linkedin-in"></i></button>
+        <button (click)="shareOnLinkedIn()" class="share-button linkedin"><i class="fa-brands fa-linkedin-in"></i></button>
+        <button (click)="shareOnFacebook()" class="share-button facebook"><i class="fa-brands fa-facebook-f"></i></button>
+        <button (click)="shareOnWhatsApp()" class="share-button whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
       </div>
       <h1>{{ post.title }}</h1>
       <div class="post-meta">
@@ -29,5 +31,4 @@
   </div>
 </div>
 <br>
-
 <app-footer></app-footer>

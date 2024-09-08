@@ -1,10 +1,4 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 li {
   list-style: none;
@@ -240,8 +234,11 @@ body.nav-active {
   padding: 40px;
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-8);
-  transition: transform 0.3s ease-in-out;
-  will-change: transform;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  will-change: transform, box-shadow;
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -501,3 +498,14 @@ body.nav-active {
     max-width: 1320px;
   }
 }
+
+
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+

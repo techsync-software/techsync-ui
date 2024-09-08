@@ -9,7 +9,9 @@ export interface BlogPost {
   content: string;
   image: string;
   author: string;
+  authorImage: string;
   date: string;
+  slug: string;
 }
 
 @Injectable({
@@ -26,9 +28,9 @@ export class BlogService {
     );
   }
 
-  getPost(id: number): Observable<BlogPost | undefined> {
+  getPost(slug: string): Observable<BlogPost | undefined> {
     return this.getPosts().pipe(
-      map(posts => posts.find(post => post.id === id))
+      map(posts => posts.find(post => post.slug === slug))
     );
   }
 }
