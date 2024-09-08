@@ -15,19 +15,19 @@ import { FooterComponent } from '../footer/footer.component';
 export class BlogPostComponent implements OnInit {
   public post: BlogPost | undefined;
   public likes: number = 0;
-  public isLiked: boolean  = false;
+  public isLiked: boolean = false;
 
   constructor(private route: ActivatedRoute, private blogService: BlogService) {}
 
   public ngOnInit(): void {
-    const postId = +this.route.snapshot.paramMap.get('id')!;
-    this.blogService.getPost(postId).subscribe(post => {
+    const postSlug = this.route.snapshot.paramMap.get('slug')!;
+    this.blogService.getPost(postSlug).subscribe(post => {
       this.post = post;
-      this.likes = Math.floor(Math.random() * 100)
+      this.likes = Math.floor(Math.random() * 100);
     });
   }
 
-  public addLikes(): void{
+  public addLikes(): void {
     this.isLiked = !this.isLiked;
     if (this.isLiked) {
       this.likes++;
@@ -36,8 +36,18 @@ export class BlogPostComponent implements OnInit {
     }
   }
 
-  public shareOnLinkedIn(): void{
+  public shareOnLinkedIn(): void {
     const url = `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${this.post?.title}`;
+    window.open(url, '_blank');
+  }
+
+  public shareOnFacebook(): void {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`;
+    window.open(url, '_blank');
+  }
+
+  public shareOnWhatsApp(): void {
+    const url = `https://api.whatsapp.com/send?text=${window.location.href}`;
     window.open(url, '_blank');
   }
 }

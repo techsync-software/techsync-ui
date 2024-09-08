@@ -1,28 +1,25 @@
 <app-menu id="inicio"></app-menu>
-
 <section class="section hero has-bg-image" aria-label="home" id="inicio">
   <div class="container">
 
-    <div class="hero-content animate__animated animate__backInLeft">
-      <h1 class="h1 hero-title">Soluciones Digitales: Desarrollo y Diseño Web</h1>
-      <p class="hero-text">
+    <div class="hero-content animate__animated animate__fadeInLeft">
+      <h1 class="h1 hero-title animate__animated animate__fadeInDown">Soluciones Digitales: Desarrollo y Diseño Web</h1>
+      <p class="hero-text animate__animated animate__fadeInUp animate__delay-1s">
         Eleva tu negocio con servicios de vanguardia en desarrollo de software, diseño web, y soporte técnico. Nuestro
         enfoque personalizado garantiza soluciones innovadoras para tus proyectos digitales, optimizando tu presencia
         online y eficiencia operativa.
       </p>
-      <div class="btn-wrapper">
+      <div class="btn-wrapper animate__animated animate__fadeIn animate__delay-2s">
         <button (click)="scrollToSection('servicios')" class="btn btn-primary">Servicios</button>
         <button (click)="scrollToSection('contactanos')" class="btn btn-outline">Contactanos</button>
       </div>
     </div>
 
-    <img src="/assets/home-img.jpg" alt="Hero Image" class="hero-image animate__animated animate__backInDown">
+    <img src="/assets/home-img.jpg" alt="Hero Image" class="hero-image animate__animated animate__zoomIn animate__delay-2s">
   </div>
-
 </section>
 
-
-<section class="section service" aria-labelledby="service-label" id="servicios">
+<section class="section service animate__animated animate__fadeIn animate__delay-2s" aria-labelledby="service-label" id="servicios">
   <div class="container">
 
     <p class="section-subtitle" id="service-label">Nuestros Servicios</p>
@@ -34,7 +31,7 @@
     <ul class="grid-list">
 
       <li>
-        <div class="service-card">
+        <div class="service-card animate__animated animate__fadeIn animate__delay-0.5s">
 
           <div class="card-icon">
             <i class="fa-solid fa-code"></i>
@@ -183,23 +180,20 @@
 
 
 
-<section class="about" aria-labelledby="about-label" id="nosotros">
+<section class="section about animate__animated animate__fadeIn animate__delay-1s" aria-labelledby="about-label" id="nosotros">
   <div class="container">
 
-    <figure class="about-banner">
+    <figure class="about-banner animate__animated animate__fadeIn animate__delay-1s">
       <img src="/assets/why-us.jpg" width="800" height="580" loading="lazy" alt="about banner" class="w-100">
     </figure>
 
-    <div class="about-content">
-
+    <div class="about-content animate__animated animate__fadeIn animate__delay-1.5s">
       <p class="section-subtitle" id="about-label">Por Qué Nosotros?</p>
-
       <h2 class="h2 section-title">
         Excelencia, Eficiencia e Innovación en Cada Proyecto
       </h2>
-
       <ul>
-        <li class="about-item" *ngFor="let item of accordionItems; let i = index">
+        <li class="about-item animate__animated animate__fadeIn animate__delay-2s" *ngFor="let item of accordionItems; let i = index">
           <div class="accordion-card" [class.expanded]="item.isOpen" data-accordion>
             <h3 class="card-title">
               <button class="accordion-btn" data-accordion-btn (click)="toggleItem(i)">
@@ -213,13 +207,27 @@
           </div>
         </li>
       </ul>
-
     </div>
 
   </div>
 </section>
 
-<section class="section project" aria-labelledby="project-label" id="proyectos">
+
+<section class="section project animate__animated animate__fadeIn animate__delay-2s" aria-labelledby="project-label" id="blog">
+  <div class="container">
+
+    <p class="section-subtitle" id="project-label">Nuestro Blog</p>
+
+    <h2 class="h2 section-title">
+      Novedades y Artículos
+    </h2>
+
+    <app-blog></app-blog>
+
+  </div>
+</section>
+
+<section class="section project animate__animated animate__fadeIn animate__delay-2s" aria-labelledby="project-label" id="proyectos">
   <div class="container">
 
     <p class="section-subtitle" id="project-label">Proyectos</p>
@@ -232,7 +240,7 @@
 
       <li>
         <a href="https://altorangojeweler.com/app/home">
-        <div class="project-card">
+          <div class="project-card animate__animated animate__fadeIn animate__delay-2.5s">
 
           <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
             <img src="/assets/alto-rango-p.png" width="560" height="350" loading="lazy" alt="alto-rango-p"

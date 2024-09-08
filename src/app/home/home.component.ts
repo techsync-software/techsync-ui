@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { BlogComponent } from './components/blog/blog.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MenuComponent, FooterComponent, CommonModule],
+  imports: [MenuComponent, FooterComponent, CommonModule, BlogComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
