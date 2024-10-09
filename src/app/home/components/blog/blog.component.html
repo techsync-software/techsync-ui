@@ -1,27 +1,23 @@
 <div class="blog-list">
   <div *ngFor="let post of posts" class="blog-item">
-    <!-- Imagen principal del post -->
+
     <img [src]="post.image" alt="{{ post.title }}">
 
-    <!-- Título del post -->
     <h2>{{ post.title }}</h2>
 
-    <!-- Vista previa del contenido del post -->
     <p class="content">{{ post.preview | slice:0:100 }}...</p>
 
-    <!-- Metadatos del post (autor e imagen del autor, fecha) -->
     <div class="blog-meta">
       <div class="author-info">
-        <!-- Imagen del autor -->
-        <img [src]="post.authorImage" />
-        <!-- Nombre del autor -->
+
+        <img alt="TechSync Software" [src]="post.authorImage" />
+
         <span>{{ post.author }}</span>
       </div>
-      <!-- Fecha del post -->
+
       <span>{{ post.date | date:'mediumDate' }}</span>
     </div>
 
-    <!-- Botón de leer más -->
     <a [routerLink]="['/blog', post.slug]" class="read-more">Leer más</a>
   </div>
 </div>

@@ -1,5 +1,4 @@
 .blog-item {
-  width: calc(33% - 20px);
   background: var(--white);
   border-radius: 12px;
   overflow: hidden;
@@ -10,9 +9,37 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-  margin-bottom: 20px; /* Añade margen inferior para separación */
-  cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 100%;
 }
+
+
+@media (min-width: 576px) {
+  .blog-item {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .blog-item {
+    width: calc(50% - 20px);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .blog-item {
+    width: calc(33% - 20px);
+  }
+}
+
+.blog-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
 
 .blog-item:hover {
   transform: translateY(-10px) scale(1.03);
