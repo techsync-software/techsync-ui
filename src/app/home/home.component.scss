@@ -1029,7 +1029,7 @@ app-blog {
 
 #proyectos .grid-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
   max-width: 100%;
@@ -1292,11 +1292,65 @@ app-blog {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem 0;
+    margin: 0 -1rem;
+  }
+  
+  .project-card {
+    margin: 0 1rem;
+    min-width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
   }
 
   .view-project-btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+  #proyectos {
+    padding: 3rem 0;
+  }
+  
+  #proyectos .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  #proyectos .section-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .project-card {
+    margin: 0 0.5rem;
+    min-width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+  }
+  
+  .project-card .card-content {
+    padding: 1rem 0.8rem;
+  }
+  
+  .project-card .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-card .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .view-project-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 }
 
