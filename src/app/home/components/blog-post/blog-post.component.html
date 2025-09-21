@@ -1,34 +1,110 @@
 <app-menu></app-menu>
-<div class="blog-mt">
-  <div class="button-container">
-    <a class="custom-button" [routerLink]="['/']">
-      <i class="fa-solid fa-arrow-left"></i>
-      Volver al inicio
-    </a>
+
+<!-- Loading Spinner -->
+<div *ngIf="isLoading" class="loading-container">
+  <div class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Cargando artículo...</p>
   </div>
-  <div *ngIf="post" class="blog-post">
-    <div class="post-image-container">
-      <img [src]="post.image" alt="{{ post.title }}" class="post-image">
+</div>
+
+<div class="blog-detail-container" [class.loading]="isLoading">
+  <!-- Hero Section -->
+  <div class="blog-hero">
+    <div class="hero-background">
+      <img [src]="post?.image" alt="{{ post?.title }}" class="hero-image">
+      <div class="hero-overlay"></div>
     </div>
-    <div class="post-content">
-      <div class="post-share-buttons">
-        <button (click)="shareOnLinkedIn()" class="share-button linkedin"><i class="fa-brands fa-linkedin-in"></i></button>
-        <button (click)="shareOnFacebook()" class="share-button facebook"><i class="fa-brands fa-facebook-f"></i></button>
-        <button (click)="shareOnWhatsApp()" class="share-button whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
-      </div>
-      <h1>{{ post.title }}</h1>
-      <div class="post-meta">
-        <span>{{ post.author }}</span>
-        <span>{{ post.date | date:'mediumDate' }}</span>
-      </div>
-      <p>{{ post.content }}</p>
-      <div class="post-interactions">
-        <div class="like-button" (click)="addLikes()">
-          <div class="heart" [class.liked]="isLiked"><i class="fa-regular fa-heart"></i></div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-content-wrapper">
+          <div class="hero-text">
+            <div class="post-category">
+              <i class="fa-solid fa-tag"></i>
+              <span>Artículo</span>
+            </div>
+            
+            <h1 class="post-title">{{ post?.title }}</h1>
+            
+            <div class="post-meta">
+              <div class="author-info">
+                <div class="author-avatar">
+                  <img [src]="post?.authorImage" alt="{{ post?.author }}">
+                </div>
+                <div class="author-details">
+                  <span class="author-name">{{ post?.author }}</span>
+                  <span class="post-date">{{ post?.date | date:'MMM d, y' }}</span>
+                </div>
+              </div>
+              
+              <div class="post-actions">
+                <div class="share-buttons">
+                  <button (click)="shareOnLinkedIn()" class="share-btn linkedin" title="Compartir en LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </button>
+                  <button (click)="shareOnFacebook()" class="share-btn facebook" title="Compartir en Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </button>
+                  <button (click)="shareOnWhatsApp()" class="share-btn whatsapp" title="Compartir en WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </button>
+                </div>
+                
+                <div class="like-button" (click)="addLikes()">
+                  <div class="heart" [class.liked]="isLiked">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                  <span class="like-count">{{ likes }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-image-container">
+            <img [src]="post?.image" alt="{{ post?.title }}" class="hero-article-image">
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Content Section -->
+  <div class="blog-content-section">
+    <div class="container">
+      <div class="content-wrapper">
+        <article class="post-content">
+          <div class="content-body">
+            <p class="post-text">{{ post?.content }}</p>
+          </div>
+        </article>
+        
+        <!-- Other Articles -->
+        <aside class="other-articles">
+          <h3>Otros Artículos</h3>
+          <div class="articles-list">
+            <div *ngFor="let article of otherArticles" class="article-item">
+              <div class="article-image">
+                <img [src]="article.image" [alt]="article.title">
+              </div>
+              <div class="article-content">
+                <h4>{{ article.title }}</h4>
+                <p>{{ article.preview | slice:0:80 }}...</p>
+                <div class="article-meta">
+                  <span class="article-author">{{ article.author }}</span>
+                  <span class="article-date">{{ article.date | date:'MMM d' }}</span>
+                </div>
+                <a [routerLink]="['/blog', article.slug]" class="read-article-btn">
+                  Leer artículo
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
 </div>
-<br>
+
 <app-footer></app-footer>

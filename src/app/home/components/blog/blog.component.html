@@ -1,23 +1,39 @@
 <div class="blog-list">
   <div *ngFor="let post of posts" class="blog-item">
-
-    <img [src]="post.image" alt="{{ post.title }}">
-
-    <h2>{{ post.title }}</h2>
-
-    <p class="content">{{ post.preview | slice:0:100 }}...</p>
-
-    <div class="blog-meta">
-      <div class="author-info">
-
-        <img alt="TechSync Software" [src]="post.authorImage" />
-
-        <span>{{ post.author }}</span>
+    <div class="blog-card">
+      <div class="blog-image-container">
+        <img [src]="post.image" alt="{{ post.title }}" class="blog-image">
+        <div class="blog-overlay">
+          <div class="blog-category">
+            <i class="fa-solid fa-tag"></i>
+            <span>Artículo</span>
+          </div>
+        </div>
       </div>
 
-      <span>{{ post.date | date:'mediumDate' }}</span>
-    </div>
+      <div class="blog-content">
+        <h2 class="blog-title">{{ post.title }}</h2>
+        <p class="blog-preview">{{ post.preview | slice:0:120 }}...</p>
 
-    <a [routerLink]="['/blog', post.slug]" class="read-more">Leer más</a>
+        <div class="blog-meta">
+          <div class="author-info">
+            <div class="author-avatar">
+              <img alt="TechSync Software" [src]="post.authorImage" />
+            </div>
+            <div class="author-details">
+              <span class="author-name">{{ post.author }}</span>
+              <span class="post-date">{{ post.date | date:'MMM d, y' }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-actions">
+          <a [routerLink]="['/blog', post.slug]" class="read-more-btn">
+            <span>Leer más</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

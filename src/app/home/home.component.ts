@@ -1,18 +1,66 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { BlogComponent } from './components/blog/blog.component';
+import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MenuComponent, FooterComponent, CommonModule, BlogComponent],
+  imports: [MenuComponent, FooterComponent, CommonModule, BlogComponent, ContactModalComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  showContactModal = false;
+  animatedElements: Set<string> = new Set();
+
   constructor(private viewportScroller: ViewportScroller) {}
+
+  ngOnInit(): void {
+    this.observeElements();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    this.animateOnScroll();
+  }
+
+  private observeElements(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          element.classList.add('animate-in');
+          this.animatedElements.add(element.id || element.className);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observar elementos que necesitan animación
+    const elementsToAnimate = document.querySelectorAll('.service-card, .project-card, .blog-item, .accordion-card');
+    elementsToAnimate.forEach(el => observer.observe(el));
+  }
+
+  private animateOnScroll(): void {
+    const elements = document.querySelectorAll('.service-card, .project-card, .blog-item, .accordion-card');
+    
+    elements.forEach((element, index) => {
+      const rect = element.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isVisible && !this.animatedElements.has(element.id || element.className)) {
+        setTimeout(() => {
+          element.classList.add('animate-in');
+          this.animatedElements.add(element.id || element.className);
+        }, index * 100); // Escalonar las animaciones
+      }
+    });
+  }
 
   accordionItems = [
     {
@@ -32,7 +80,9 @@ export class HomeComponent {
   }
 
   scrollToSection(sectionId: string): void {
-    if(sectionId === 'footer') {
+    if(sectionId === 'contactanos') {
+      this.showContactModal = true;
+    } else if(sectionId === 'footer') {
       window.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'smooth'
@@ -40,5 +90,9 @@ export class HomeComponent {
     } else {
       this.viewportScroller.scrollToAnchor(sectionId);
     }
+  }
+
+  onCloseContactModal(): void {
+    this.showContactModal = false;
   }
 }

@@ -1,0 +1,39 @@
+<div class="modal-overlay" (click)="onCloseModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title">Contáctanos</h2>
+      <button class="close-btn" (click)="onCloseModal()" aria-label="Cerrar modal">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Social Media Section -->
+      <div class="social-section">
+        <h3 class="section-title">Síguenos en nuestras redes sociales</h3>
+        <div class="social-grid">
+          <div 
+            *ngFor="let social of socialLinks" 
+            class="social-item"
+            (click)="onSocialClick(social.url)"
+            [style.--social-color]="social.color"
+          >
+            <i [class]="social.icon"></i>
+            <span class="social-name">{{ social.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Section -->
+      <div class="email-section">
+        <h3 class="section-title">Envíanos un correo</h3>
+        <div class="email-info">
+          <p class="email-address">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info&#64;techsyncsoft.com">info&#64;techsyncsoft.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

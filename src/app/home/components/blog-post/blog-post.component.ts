@@ -14,16 +14,37 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class BlogPostComponent implements OnInit {
   public post: BlogPost | undefined;
+  public otherArticles: BlogPost[] = [];
   public likes: number = 0;
   public isLiked: boolean = false;
+  public isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute, private blogService: BlogService) {}
 
   public ngOnInit(): void {
-    const postSlug = this.route.snapshot.paramMap.get('slug')!;
+    this.route.paramMap.subscribe(params => {
+      const postSlug = params.get('slug')!;
+      this.loadPost(postSlug);
+    });
+  }
+
+  private loadPost(postSlug: string): void {
+    this.isLoading = true;
     this.blogService.getPost(postSlug).subscribe(post => {
       this.post = post;
       this.likes = Math.floor(Math.random() * 100);
+      
+      // Obtener otros artículos (excluyendo el actual)
+      this.blogService.getPosts().subscribe(posts => {
+        this.otherArticles = posts
+          .filter(p => p.slug !== postSlug)
+          .slice(0, 3); // Mostrar máximo 3 artículos
+        
+        // Simular tiempo de carga para mejor UX
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 800);
+      });
     });
   }
 
