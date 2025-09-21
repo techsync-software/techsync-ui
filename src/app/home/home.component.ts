@@ -22,9 +22,17 @@ export class HomeComponent implements OnInit {
     this.observeElements();
   }
 
+  private scrollThrottle: boolean = false;
+
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
-    this.animateOnScroll();
+    if (!this.scrollThrottle) {
+      this.scrollThrottle = true;
+      requestAnimationFrame(() => {
+        this.animateOnScroll();
+        this.scrollThrottle = false;
+      });
+    }
   }
 
   private observeElements(): void {
@@ -51,13 +59,14 @@ export class HomeComponent implements OnInit {
     
     elements.forEach((element, index) => {
       const rect = element.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
       
       if (isVisible && !this.animatedElements.has(element.id || element.className)) {
-        setTimeout(() => {
+        // Usar requestAnimationFrame para mejor performance
+        requestAnimationFrame(() => {
           element.classList.add('animate-in');
           this.animatedElements.add(element.id || element.className);
-        }, index * 100); // Escalonar las animaciones
+        });
       }
     });
   }
