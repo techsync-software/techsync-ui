@@ -1441,9 +1441,9 @@ body.nav-active {
   }
 }
 
-/* Scroll Animations (suaves, sin ocultar contenido inicialmente) */
+/* Scroll Animations (suaves, sin ocultar contenido inicialmente).
+   OJO: .project-card NO usa este sistema para evitar glitches en móvil. */
 .service-card,
-.project-card,
 .blog-item,
 .accordion-card {
   opacity: 1;
@@ -1454,7 +1454,6 @@ body.nav-active {
 }
 
 .service-card.animate-in,
-.project-card.animate-in,
 .blog-item.animate-in,
 .accordion-card.animate-in {
   transform: translateY(-4px);

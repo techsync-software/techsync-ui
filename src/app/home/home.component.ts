@@ -53,13 +53,14 @@ export class HomeComponent implements OnInit {
       rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observar elementos que necesitan animación
-    const elementsToAnimate = document.querySelectorAll('.service-card, .project-card, .blog-item, .accordion-card, .design-implement-item');
+    // Observar elementos que necesitan animación (excluimos .project-card para evitar issues en móvil)
+    const elementsToAnimate = document.querySelectorAll('.service-card, .blog-item, .accordion-card, .design-implement-item');
     elementsToAnimate.forEach(el => observer.observe(el));
   }
 
   private animateOnScroll(): void {
-    const elements = document.querySelectorAll('.service-card, .project-card, .blog-item, .accordion-card, .design-implement-item');
+    // Mismas clases que en observeElements (sin .project-card)
+    const elements = document.querySelectorAll('.service-card, .blog-item, .accordion-card, .design-implement-item');
     
     elements.forEach((element, index) => {
       const rect = element.getBoundingClientRect();
