@@ -80,7 +80,14 @@
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <div class="overlay" data-nav-toggler data-overlay *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+    <div
+      class="overlay"
+      data-nav-toggler
+      data-overlay
+      *ngIf="isMenuOpen"
+      [class.active]="isMenuOpen"
+      (click)="toggleMenu()"
+    ></div>
 
   </div>
 </header>

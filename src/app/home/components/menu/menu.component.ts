@@ -36,6 +36,13 @@ export class MenuComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+
+    const body = document.body;
+    if (this.isMenuOpen) {
+      body.classList.add('nav-active');
+    } else {
+      body.classList.remove('nav-active');
+    }
   }
 
   private checkScroll() {
@@ -44,6 +51,10 @@ export class MenuComponent implements OnInit {
   }
 
   scrollToSection(sectionId: string): void {
+    if (this.isMenuOpen) {
+      this.toggleMenu();
+    }
+
     if(sectionId === 'footer') {
       window.scrollTo({
         top: document.body.scrollHeight,
