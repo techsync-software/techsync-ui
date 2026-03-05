@@ -1,10 +1,13 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
+import { TranslationService, LangCode } from '../../../services/translation.service';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 @Component({
   selector: 'app-menu',
   standalone: true,
   imports: [
     CommonModule,
+    TranslatePipe,
   ],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
@@ -12,14 +15,21 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 export class MenuComponent implements OnInit {
   isMenuOpen: boolean = false;
   isHeaderScrolled: boolean = false;
+  currentLang: LangCode = 'es';
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(
+    private readonly viewportScroller: ViewportScroller,
+    private readonly translationService: TranslationService
+  ) {}
 
   ngOnInit(): void {
     this.checkScroll();
+    this.translationService.currentLang$.subscribe((lang: LangCode) => {
+      this.currentLang = lang;
+    });
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onWindowScroll() {
     this.checkScroll();
   }
@@ -42,5 +52,9 @@ export class MenuComponent implements OnInit {
     } else {
       this.viewportScroller.scrollToAnchor(sectionId);
     }
+  }
+
+  changeLanguage(lang: LangCode): void {
+    this.translationService.setLanguage(lang);
   }
 }

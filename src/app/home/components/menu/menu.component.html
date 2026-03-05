@@ -22,16 +22,39 @@
 
       <ul class="navbar-list">
 
-        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('inicio')">Inicio</a></li>
-        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('nosotros')">Nosotros</a></li>
-        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('proyectos')">Proyectos</a></li>
-        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('blog')">Blog</a></li>
-        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('footer')">Contáctanos</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('inicio')">{{ 'nav.home' | t }}</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('nosotros')">{{ 'nav.about' | t }}</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('proyectos')">{{ 'nav.projects' | t }}</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('blog')">{{ 'nav.blog' | t }}</a></li>
+        <li><a href="javascript:void(0)" class="navbar-link" (click)="scrollToSection('footer')">{{ 'nav.contact' | t }}</a></li>
 
       </ul>
 
       <div class="wrapper">
-        <a href="mailto:info&#64;techsyncsoft.com" class="contact-link"><i class="fa-regular fa-envelope"></i> Envíanos un correo</a> <br>
+        <a href="mailto:info&#64;techsyncsoft.com" class="contact-link">
+          <i class="fa-regular fa-envelope"></i>
+          {{ 'contact.footer.mail' | t }}
+        </a>
+        <br>
+      </div>
+
+      <div class="lang-switcher">
+        <button
+          type="button"
+          class="lang-btn"
+          [class.active]="currentLang === 'es'"
+          (click)="changeLanguage('es')"
+        >
+          ES
+        </button>
+        <button
+          type="button"
+          class="lang-btn"
+          [class.active]="currentLang === 'en'"
+          (click)="changeLanguage('en')"
+        >
+          EN
+        </button>
       </div>
 
       <ul class="social-list">

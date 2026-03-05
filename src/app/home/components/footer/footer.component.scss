@@ -136,6 +136,7 @@ body.nav-active { overflow: hidden; }
   background-color: var(--dark-blue);
   padding-block: 60px 100px;
   color: var(--light-gray);
+  border-top: 3px solid rgba(255, 255, 255, 0.9);
 }
 
 .footer-brand .footer-text { margin-block: 20px; }

@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Output, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-contact-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './contact-modal.component.html',
   styleUrls: ['./contact-modal.component.scss']
 })
@@ -59,8 +60,8 @@ export class ContactModalComponent {
     window.open(url, '_blank');
   }
 
-  @HostListener('document:keydown.escape', ['$event'])
-  onEscapeKey(event: KeyboardEvent) {
+  @HostListener('document:keydown.escape')
+  onEscapeKey() {
     this.onCloseModal();
   }
 }
