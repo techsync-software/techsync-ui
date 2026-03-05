@@ -1882,10 +1882,12 @@ app-blog {
   opacity: 0;
   transition: all 0.3s ease;
   border-radius: 12px;
+  pointer-events: none; /* No bloquear scroll ni taps por defecto */
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .view-project-btn {
@@ -1913,6 +1915,16 @@ app-blog {
 .view-project-btn i {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* En pantallas móviles desactivamos el overlay para evitar glitches
+   en navegadores embebidos (Instagram, etc.) y dejar el comportamiento
+   igual que en Servicios. */
+@media (max-width: 768px) {
+  .project-overlay {
+    display: none;
+    pointer-events: none;
+  }
 }
 
 /* Responsive Design */
