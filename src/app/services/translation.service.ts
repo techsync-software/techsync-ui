@@ -193,8 +193,8 @@ export class TranslationService {
       en: 'Real Projects that Transform Businesses'
     },
     'projects.description': {
-      es: 'Más de 4 años diseñando e implementando soluciones para empresas de sectores como retail, servicios, importación y distribución, tecnología y consultoría. Cada proyecto es una historia de crecimiento apoyada en tecnología.',
-      en: 'More than 4 years designing and implementing solutions for companies in sectors such as retail, services, import and distribution, technology and consulting. Every project is a growth story powered by technology.'
+      es: 'Más de 3 años diseñando e implementando soluciones para empresas de sectores como retail, servicios, importación y distribución, tecnología y consultoría. Cada proyecto es una historia de crecimiento apoyada en tecnología.',
+      en: 'More than 3 years designing and implementing solutions for companies in sectors such as retail, services, import and distribution, technology and consulting. Every project is a growth story powered by technology.'
     },
     'projects.viewProject': { es: 'Ver Proyecto', en: 'View Project' },
 

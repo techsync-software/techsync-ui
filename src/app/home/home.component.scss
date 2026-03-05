@@ -1758,6 +1758,16 @@ app-blog {
   margin: 0;
 }
 
+#proyectos .projects-grid > li {
+  min-width: 0;
+}
+
+#proyectos .projects-grid > li > a {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
 @media (min-width: 768px) {
   #proyectos .projects-grid {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
@@ -1786,6 +1796,9 @@ app-blog {
   flex-direction: column;
   position: relative;
   margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .project-card:hover {
@@ -1929,6 +1942,16 @@ app-blog {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  #proyectos .row--cards,
+  #proyectos .col--grid,
+  #proyectos .projects-grid,
+  #proyectos .projects-grid > li,
+  #proyectos .projects-grid > li > a {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   .hero-features {
     gap: 1rem;
     margin: 2rem 0;
@@ -2054,6 +2077,14 @@ app-blog {
   .view-project-btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  /* Evita overflow lateral en navegadores móviles con hover persistente */
+  .project-card:hover,
+  .service-card:hover,
+  .project-card:hover .card-banner img,
+  .project-card:hover .tech-tag {
+    transform: none;
   }
 }
 
