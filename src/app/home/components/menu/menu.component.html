@@ -38,12 +38,13 @@
         <br>
       </div>
 
-      <div class="lang-switcher">
+      <div class="lang-switcher" aria-label="Idioma / Language">
         <button
           type="button"
           class="lang-btn"
           [class.active]="currentLang === 'es'"
           (click)="changeLanguage('es')"
+          [attr.aria-pressed]="currentLang === 'es'"
         >
           ES
         </button>
@@ -52,6 +53,7 @@
           class="lang-btn"
           [class.active]="currentLang === 'en'"
           (click)="changeLanguage('en')"
+          [attr.aria-pressed]="currentLang === 'en'"
         >
           EN
         </button>

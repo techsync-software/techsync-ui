@@ -4,7 +4,7 @@
 <div *ngIf="isLoading" class="loading-container">
   <div class="loading-spinner">
     <div class="spinner"></div>
-    <p>Cargando artículo...</p>
+    <p>{{ 'blog.loading' | t }}</p>
   </div>
 </div>
 
@@ -22,7 +22,7 @@
           <div class="hero-text">
             <div class="post-category">
               <i class="fa-solid fa-tag"></i>
-              <span>Artículo</span>
+              <span>{{ 'blog.category' | t }}</span>
             </div>
             
             <h1 class="post-title">{{ post?.title }}</h1>
@@ -40,13 +40,13 @@
               
               <div class="post-actions">
                 <div class="share-buttons">
-                  <button (click)="shareOnLinkedIn()" class="share-btn linkedin" title="Compartir en LinkedIn">
+                  <button (click)="shareOnLinkedIn()" class="share-btn linkedin" [attr.title]="'blog.shareLinkedIn' | t">
                     <i class="fa-brands fa-linkedin-in"></i>
                   </button>
-                  <button (click)="shareOnFacebook()" class="share-btn facebook" title="Compartir en Facebook">
+                  <button (click)="shareOnFacebook()" class="share-btn facebook" [attr.title]="'blog.shareFacebook' | t">
                     <i class="fa-brands fa-facebook-f"></i>
                   </button>
-                  <button (click)="shareOnWhatsApp()" class="share-btn whatsapp" title="Compartir en WhatsApp">
+                  <button (click)="shareOnWhatsApp()" class="share-btn whatsapp" [attr.title]="'blog.shareWhatsApp' | t">
                     <i class="fa-brands fa-whatsapp"></i>
                   </button>
                 </div>
@@ -81,7 +81,7 @@
         
         <!-- Other Articles -->
         <aside class="other-articles">
-          <h3>Otros Artículos</h3>
+          <h3>{{ 'blog.otherArticles' | t }}</h3>
           <div class="articles-list">
             <div *ngFor="let article of otherArticles" class="article-item">
               <div class="article-image">
@@ -95,7 +95,7 @@
                   <span class="article-date">{{ article.date | date:'MMM d' }}</span>
                 </div>
                 <a [routerLink]="['/blog', article.slug]" class="read-article-btn">
-                  Leer artículo
+                  {{ 'blog.readArticle' | t }}
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>

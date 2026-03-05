@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MenuComponent } from '../menu/menu.component';
 import { FooterComponent } from '../footer/footer.component';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, RouterLink, MenuComponent, FooterComponent],
+  imports: [CommonModule, RouterLink, MenuComponent, FooterComponent, TranslatePipe],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })

@@ -55,6 +55,12 @@ export class MenuComponent implements OnInit {
   }
 
   changeLanguage(lang: LangCode): void {
-    this.translationService.setLanguage(lang);
+    if (this.translationService.currentLang === lang) return;
+    const body = document.body;
+    body.classList.add('lang-transition');
+    setTimeout(() => {
+      this.translationService.setLanguage(lang);
+      body.classList.remove('lang-transition');
+    }, 250);
   }
 }

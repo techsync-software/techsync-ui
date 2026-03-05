@@ -6,7 +6,7 @@
         <div class="blog-overlay">
           <div class="blog-category">
             <i class="fa-solid fa-tag"></i>
-            <span>Artículo</span>
+            <span>{{ 'blog.category' | t }}</span>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
 
         <div class="blog-actions">
           <a [routerLink]="['/blog', post.slug]" class="read-more-btn">
-            <span>Leer más</span>
+            <span>{{ 'blog.readMore' | t }}</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>

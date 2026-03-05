@@ -322,19 +322,26 @@ body.nav-active { overflow: hidden; }
 @media (min-width: 992px) {
   .container { max-width: 960px; }
   .nav-open-btn,
-  .navbar > *:not(.navbar-list),
+  .navbar > *:not(.navbar-list):not(.lang-switcher),
   .overlay { display: none; }
 
   .navbar,
   .navbar.active {
     all: unset;
-    display: block;
-    margin-inline: auto 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-inline: auto 0;
   }
 
   .navbar-list {
     display: flex;
     gap: 30px;
+  }
+
+  .lang-switcher {
+    margin-top: 0;
+    flex-shrink: 0;
   }
 
   .navbar-link {

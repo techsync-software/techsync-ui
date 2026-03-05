@@ -206,28 +206,24 @@
             <div class="project-card">
             <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                 <img src="https://res.cloudinary.com/di7mwkzuh/image/upload/v1772633998/primefoods_v0mnqg.jpg"
-                  width="560" height="350" loading="lazy" alt="Prime Foods - Importación de productos gourmet"
+                  width="560" height="350" loading="lazy" [attr.alt]="'project.primefoods.alt' | t"
                   class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Prime Foods</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Plataforma web</strong> para una firma dedicada a la importación de productos gourmet.
-                  Prime Foods se consagra como el <em>curador definitivo de tesoros culinarios</em>, conectando
-                  marcas premium con el mercado local.
-                </p>
+                <p class="card-text">{{ 'project.primefoods.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">Desarrollo Web</span>
-                  <span class="tech-tag">Ecommerce</span>
-                  <span class="tech-tag">UX/UI</span>
+                  <span class="tech-tag">{{ 'tech.webDev' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.ecommerce' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.uxui' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -240,28 +236,24 @@
             <div class="project-card">
             <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                 <img src="https://res.cloudinary.com/di7mwkzuh/image/upload/v1772633999/vizcainomuebles_pexdl9.jpg"
-                  width="560" height="350" loading="lazy" alt="Vizcaino Muebles - Mueblería y Electrodomésticos"
+                  width="560" height="350" loading="lazy" [attr.alt]="'project.vizcaino.alt' | t"
                   class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Vizcaino Muebles</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Tienda online</strong> para una mueblería y casa de electrodomésticos que ofrece
-                  los mejores precios, garantía y facilidades de pago. Diseño orientado a conversión y catálogo
-                  organizado para una experiencia de compra clara.
-                </p>
+                <p class="card-text">{{ 'project.vizcaino.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">Ecommerce</span>
-                  <span class="tech-tag">Retail</span>
-                  <span class="tech-tag">SEO</span>
+                  <span class="tech-tag">{{ 'tech.ecommerce' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.retail' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.seo' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -274,27 +266,23 @@
             <div class="project-card">
             <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                 <img src="https://res.cloudinary.com/di7mwkzuh/image/upload/v1772633999/trendly_ecfgdb.jpg" width="560"
-                  height="350" loading="lazy" alt="Trendly - Aplicación de citas" class="img-cover">
+                  height="350" loading="lazy" [attr.alt]="'project.trendly.alt' | t" class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Trendly</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Aplicación de citas</strong> con enfoque moderno en experiencia de usuario,
-                  rendimiento y escalabilidad. Participamos en el diseño y desarrollo de la plataforma
-                  digital que conecta personas de forma segura y amigable.
-                </p>
+                <p class="card-text">{{ 'project.trendly.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">App Móvil</span>
-                  <span class="tech-tag">Producto Digital</span>
-                  <span class="tech-tag">UX/UI</span>
+                  <span class="tech-tag">{{ 'tech.mobileApp' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.digitalProduct' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.uxui' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -307,27 +295,23 @@
             <div class="project-card">
               <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                 <img src="/assets/events-planner-p.png" width="560" height="350" loading="lazy"
-                  alt="Events Planner - Planificación de Eventos" class="img-cover">
+                  [attr.alt]="'project.eventsplanner.alt' | t" class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Events Planner</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Página web</strong> para planificación de eventos memorables, desde bodas hasta celebraciones
-                  corporativas.
-                  Desarrollado con <em>WordPress</em> y diseño responsive.
-                </p>
+                <p class="card-text">{{ 'project.eventsplanner.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">Responsive</span>
-                  <span class="tech-tag">UI/UX</span>
+                  <span class="tech-tag">{{ 'tech.wordpress' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.responsive' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.uiux' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -339,27 +323,24 @@
           <a href="https://renew.com.do/" target="_blank" rel="noopener">
             <div class="project-card">
               <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                <img src="/assets/renew.png" width="560" height="350" loading="lazy" alt="Renew Centro de Terapia"
+                <img src="/assets/renew.png" width="560" height="350" loading="lazy" [attr.alt]="'project.renew.alt' | t"
                   class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Renew Centro de Terapia</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Sitio web profesional</strong> para centro de terapia especializado.
-                  Diseño moderno y funcional que refleja la serenidad y profesionalismo del centro.
-                </p>
+                <p class="card-text">{{ 'project.renew.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">Diseño Web</span>
-                  <span class="tech-tag">SEO</span>
+                  <span class="tech-tag">{{ 'tech.wordpress' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.webDesign' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.seo' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -371,27 +352,24 @@
           <a href="https://fundacionrenew.org/" target="_blank" rel="noopener">
             <div class="project-card">
               <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                <img src="/assets/fundacion.png" width="560" height="350" loading="lazy" alt="Fundación Renew"
+                <img src="/assets/fundacion.png" width="560" height="350" loading="lazy" [attr.alt]="'project.fundacion.alt' | t"
                   class="img-cover">
               </figure>
               <div class="card-content">
                 <h3 class="h3">
                   <span class="card-title">Fundación Renew</span>
                 </h3>
-                <p class="card-text">
-                  <strong>Página web</strong>
-                  Diseño empático y funcional.
-                </p>
+                <p class="card-text">{{ 'project.fundacion.description' | t }}</p>
                 <div class="project-tech">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">Responsive</span>
-                  <span class="tech-tag">Accesibilidad</span>
+                  <span class="tech-tag">{{ 'tech.wordpress' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.responsive' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.accessibility' | t }}</span>
                 </div>
 
                 <div class="project-overlay">
                   <button class="view-project-btn">
                     <i class="fa-solid fa-external-link-alt"></i>
-                    Ver Proyecto
+                    {{ 'projects.viewProject' | t }}
                   </button>
                 </div>
               </div>
@@ -412,12 +390,7 @@
         <div class="col col--content about-content animate__animated animate__fadeIn animate__delay-1.5s">
           <p class="section-subtitle" id="about-label">{{ 'about.subtitle' | t }}</p>
           <h2 class="h2 section-title">{{ 'about.title' | t }}</h2>
-          <p class="section-description">
-            Como <strong>startup especializada</strong>, nos enfocamos en entregar soluciones que van más allá de las
-            expectativas.
-            Nuestro enfoque personalizado y nuestra pasión por la tecnología nos permiten crear experiencias digitales
-            que realmente impulsan el crecimiento de tu negocio.
-          </p>
+          <p class="section-description">{{ 'about.description' | t }}</p>
           <ul>
             <li class="about-item animate__animated animate__fadeIn animate__delay-2s"
               *ngFor="let item of accordionItems; let i = index">
@@ -425,11 +398,11 @@
                 <h3 class="card-title">
                   <button class="accordion-btn" data-accordion-btn (click)="toggleItem(i)">
                     <i class="fa-solid fa-circle-chevron-down"></i>
-                    <span class="span h5">{{ item.title }}</span>
+                    <span class="span h5">{{ item.titleKey | t }}</span>
                   </button>
                 </h3>
                 <p class="accordion-content" *ngIf="item.isOpen">
-                  {{ item.content }}
+                  {{ item.contentKey | t }}
                 </p>
               </div>
             </li>
@@ -443,19 +416,19 @@
           <div class="about-highlights">
             <div class="about-highlight-item">
               <span class="about-highlight-icon"><i class="fa-solid fa-lightbulb"></i></span>
-              <span class="about-highlight-text">Innovación constante</span>
+              <span class="about-highlight-text">{{ 'about.highlight1' | t }}</span>
             </div>
             <div class="about-highlight-item">
               <span class="about-highlight-icon"><i class="fa-solid fa-chart-line"></i></span>
-              <span class="about-highlight-text">Resultados medibles</span>
+              <span class="about-highlight-text">{{ 'about.highlight2' | t }}</span>
             </div>
             <div class="about-highlight-item">
               <span class="about-highlight-icon"><i class="fa-solid fa-handshake"></i></span>
-              <span class="about-highlight-text">Acompañamiento cercano</span>
+              <span class="about-highlight-text">{{ 'about.highlight3' | t }}</span>
             </div>
             <div class="about-highlight-item">
               <span class="about-highlight-icon"><i class="fa-solid fa-shield-halved"></i></span>
-              <span class="about-highlight-text">Calidad y seguridad</span>
+              <span class="about-highlight-text">{{ 'about.highlight4' | t }}</span>
             </div>
           </div>
         </div>
@@ -530,28 +503,22 @@
       <li class="design-implement-item">
         <div class="step-badge">1</div>
         <div class="step-content">
-          <h3 class="h4 step-title">Estrategia y análisis</h3>
-          <p class="step-text">
-            Entendemos tu negocio, definimos objetivos y diseñamos la solución ideal para tu caso.
-          </p>
+          <h3 class="h4 step-title">{{ 'design.step1.title' | t }}</h3>
+          <p class="step-text">{{ 'design.step1.text' | t }}</p>
         </div>
       </li>
       <li class="design-implement-item">
         <div class="step-badge">2</div>
         <div class="step-content">
-          <h3 class="h4 step-title">Desarrollo tecnológico</h3>
-          <p class="step-text">
-            Construimos la plataforma con tecnologías modernas y buenas prácticas para asegurar calidad y escalabilidad.
-          </p>
+          <h3 class="h4 step-title">{{ 'design.step2.title' | t }}</h3>
+          <p class="step-text">{{ 'design.step2.text' | t }}</p>
         </div>
       </li>
       <li class="design-implement-item">
         <div class="step-badge">3</div>
         <div class="step-content">
-          <h3 class="h4 step-title">Lanzamiento y mejora continua</h3>
-          <p class="step-text">
-            Publicamos la solución, medimos resultados y la optimizamos para seguir mejorando su rendimiento en el tiempo.
-          </p>
+          <h3 class="h4 step-title">{{ 'design.step3.title' | t }}</h3>
+          <p class="step-text">{{ 'design.step3.text' | t }}</p>
         </div>
       </li>
     </ul>

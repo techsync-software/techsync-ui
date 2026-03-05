@@ -8,7 +8,7 @@
       </a>
 
       <p class="footer-text">
-        &copy; {{ currentYear }} TechSync Software. <br> Todos los derechos reservados.
+        &copy; {{ currentYear }} TechSync Software. <br> {{ 'footer.rights' | t }}
       </p>
 
       <ul class="social-list">
@@ -54,27 +54,27 @@
     <ul class="footer-list">
 
       <li>
-        <p class="h4 footer-list-title">Dirección</p>
+        <p class="h4 footer-list-title">{{ 'footer.address.title' | t }}</p>
       </li>
 
       <li>
         <address class="footer-text">
-          Santo Domingo, República Dominicana
+          {{ 'footer.address.city' | t }}
         </address>
       </li>
     </ul>
 
     <ul class="footer-list">
       <li>
-        <a href="javascript:void(0)" class="footer-link">Nosotros</a>
+        <a href="#nosotros" class="footer-link">{{ 'nav.about' | t }}</a>
       </li>
 
       <li>
-        <a href="javascript:void(0)" class="footer-link">{{ 'services.subtitle' | t }}</a>
+        <a href="#servicios" class="footer-link">{{ 'services.subtitle' | t }}</a>
       </li>
 
       <li>
-        <a href="javascript:void(0)" class="footer-link">{{ 'projects.subtitle' | t }}</a>
+        <a href="#proyectos" class="footer-link">{{ 'projects.subtitle' | t }}</a>
       </li>
 
     </ul>

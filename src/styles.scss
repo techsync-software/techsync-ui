@@ -16,6 +16,12 @@ body {
   margin: 0;
   font-family: 'Poppins', "Helvetica Neue", sans-serif;
   overflow-x: hidden;
+  transition: opacity 0.25s ease;
+}
+
+/* Transición suave al cambiar de idioma */
+body.lang-transition {
+  opacity: 0;
 }
 
 :root {

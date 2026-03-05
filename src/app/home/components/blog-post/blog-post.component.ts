@@ -4,11 +4,12 @@ import { BlogPost, BlogService } from '../../../services/blog.service';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from "../menu/menu.component";
 import { FooterComponent } from '../footer/footer.component';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [CommonModule, MenuComponent, MenuComponent, RouterLink, FooterComponent],
+  imports: [CommonModule, MenuComponent, RouterLink, FooterComponent, TranslatePipe],
   templateUrl: './blog-post.component.html',
   styleUrl: './blog-post.component.scss'
 })

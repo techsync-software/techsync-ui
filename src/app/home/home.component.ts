@@ -76,21 +76,9 @@ export class HomeComponent implements OnInit {
   }
 
   accordionItems = [
-    {
-      title: 'Innovación y Creatividad en el Diseño',
-      content: 'Nuestras soluciones están impulsadas por ideas creativas y un diseño innovador. Diseñamos productos digitales que conectan con tus usuarios y fortalecen tu marca en cada punto de contacto.',
-      isOpen: true
-    },
-    {
-      title: 'Experiencia en múltiples sectores',
-      content: 'Hemos trabajado en plataformas utilizadas por empresas de retail, servicios, importación y distribución, tecnología y consultoría. Desde portales utilizados por más de 200 intermediarios hasta sistemas empresariales de alto tráfico.',
-      isOpen: false
-    },
-    {
-      title: 'Compromiso con la calidad y el acompañamiento',
-      content: 'Más que entregar un producto, construimos relaciones de largo plazo. Acompañamos a tu equipo después del lanzamiento, optimizando, automatizando procesos y asegurando que la solución siga creciendo con tu negocio.',
-      isOpen: false
-    }
+    { titleKey: 'about.accordion1.title', contentKey: 'about.accordion1.content', isOpen: true },
+    { titleKey: 'about.accordion2.title', contentKey: 'about.accordion2.content', isOpen: false },
+    { titleKey: 'about.accordion3.title', contentKey: 'about.accordion3.content', isOpen: false }
   ];
 
   toggleItem(index: number): void {
