@@ -127,14 +127,14 @@ export class TranslationService {
       en: 'Let’s talk about your project'
     },
 
-    'about.subtitle': { es: 'Por Qué Nosotros?', en: 'Why Us?' },
+    'about.subtitle': { es: 'Quiénes Somos', en: 'Who We Are' },
     'about.title': {
-      es: 'Excelencia, Eficiencia e Innovación en Cada Proyecto',
-      en: 'Excellence, Efficiency and Innovation in Every Project'
+      es: 'Una startup tecnológica construida para hacer crecer tu negocio',
+      en: 'A technology startup built to grow your business'
     },
     'about.description': {
-      es: 'Como startup especializada, nos enfocamos en entregar soluciones que van más allá de las expectativas. Nuestro enfoque personalizado y nuestra pasión por la tecnología nos permiten crear experiencias digitales que realmente impulsan el crecimiento de tu negocio.',
-      en: 'As a specialized startup, we focus on delivering solutions that go beyond expectations. Our personalized approach and passion for technology allow us to create digital experiences that truly drive your business growth.'
+      es: 'TechSync Software es una empresa especializada en desarrollo de software moderno. Nuestro equipo combina experiencia técnica y visión de negocio para construir aplicaciones web, apps móviles, ERPs, dashboards e integraciones que generan resultados reales para cada cliente.',
+      en: 'TechSync Software is a company specialized in modern software development. Our team combines technical expertise and business vision to build web apps, mobile apps, ERPs, dashboards and integrations that deliver real results for every client.'
     },
     'about.accordion1.title': { es: 'Innovación y Creatividad en el Diseño', en: 'Innovation and Creativity in Design' },
     'about.accordion1.content': {
@@ -229,7 +229,27 @@ export class TranslationService {
       en: 'Website. Empathetic and functional design.'
     },
 
+    'project.madeiratech.alt': { es: 'Madeira Tech - Materiales de Construcción y Madera', en: 'Madeira Tech - Construction Materials and Wood' },
+    'project.madeiratech.description': {
+      es: 'Plataforma web bilingüe para empresa líder en venta de materiales de construcción y madera de alto rendimiento. Catálogo de productos, diseño arquitectónico moderno y orientado a constructores y arquitectos.',
+      en: 'Bilingual web platform for a leading company in the sale of construction materials and high-performance wood. Product catalog, modern architectural design oriented to builders and architects.'
+    },
+
+    'brands.subtitle': { es: 'Nuestras Marcas', en: 'Our Brands' },
+    'brands.title': { es: 'Marcas que pertenecen a TechSync', en: 'Brands that belong to TechSync' },
+    'brands.description': {
+      es: 'Más que una empresa de desarrollo, TechSync ha construido sus propios productos digitales: apps, ERPs, dashboards e integraciones que operan hoy en el mercado.',
+      en: 'More than a development company, TechSync has built its own digital products: apps, ERPs, dashboards and integrations operating in the market today.'
+    },
+
+    'project.digitalcom.alt': { es: 'Digital Com - Plataforma Digital', en: 'Digital Com - Digital Platform' },
+    'project.digitalcom.description': {
+      es: 'Plataforma digital desarrollada por TechSync. Solución tecnológica moderna orientada al mercado dominicano con diseño responsivo y experiencia de usuario optimizada.',
+      en: 'Digital platform developed by TechSync. Modern technology solution oriented to the Dominican market with responsive design and optimized user experience.'
+    },
+
     'tech.webDev': { es: 'Desarrollo Web', en: 'Web Development' },
+    'tech.multilingue': { es: 'Multilingüe', en: 'Multilingual' },
     'tech.ecommerce': { es: 'Ecommerce', en: 'Ecommerce' },
     'tech.uxui': { es: 'UX/UI', en: 'UX/UI' },
     'tech.retail': { es: 'Retail', en: 'Retail' },

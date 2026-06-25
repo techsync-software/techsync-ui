@@ -202,6 +202,34 @@
       <div class="row row--cards">
         <ul class="col col--grid projects-grid">
         <li>
+          <a href="https://madeiratech.do/" target="_blank" rel="noopener">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                <img src="/assets/image copy 2.png" width="560" height="350" loading="lazy"
+                  [attr.alt]="'project.madeiratech.alt' | t" class="img-cover">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3">
+                  <span class="card-title">Madeira Tech</span>
+                </h3>
+                <p class="card-text">{{ 'project.madeiratech.description' | t }}</p>
+                <div class="project-tech">
+                  <span class="tech-tag">{{ 'tech.webDev' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.uxui' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.multilingue' | t }}</span>
+                </div>
+                <div class="project-overlay">
+                  <button class="view-project-btn">
+                    <i class="fa-solid fa-external-link-alt"></i>
+                    {{ 'projects.viewProject' | t }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
           <a href="https://www.primefoods.do/" target="_blank" rel="noopener">
             <div class="project-card">
             <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -376,7 +404,79 @@
             </div>
           </a>
         </li>
+
+        <li>
+          <a href="https://digitalcom.do/" target="_blank" rel="noopener">
+            <div class="project-card">
+              <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                <img src="/assets/image copy.png" width="560" height="350" loading="lazy"
+                  [attr.alt]="'project.digitalcom.alt' | t" class="img-cover">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3">
+                  <span class="card-title">Digital Com</span>
+                </h3>
+                <p class="card-text">{{ 'project.digitalcom.description' | t }}</p>
+                <div class="project-tech">
+                  <span class="tech-tag">{{ 'tech.webDev' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.uxui' | t }}</span>
+                  <span class="tech-tag">{{ 'tech.seo' | t }}</span>
+                </div>
+
+                <div class="project-overlay">
+                  <button class="view-project-btn">
+                    <i class="fa-solid fa-external-link-alt"></i>
+                    {{ 'projects.viewProject' | t }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
       </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marcas con las que hemos trabajado -->
+<section class="section brands animate__animated animate__fadeIn animate__delay-1s" id="marcas">
+  <div class="container section-container">
+    <div class="section-grid">
+      <div class="row row--header">
+        <div class="col col--content">
+          <p class="section-subtitle">{{ 'brands.subtitle' | t }}</p>
+          <h2 class="h2 section-title">{{ 'brands.title' | t }}</h2>
+          <p class="section-description">{{ 'brands.description' | t }}</p>
+        </div>
+      </div>
+      <div class="row row--cards">
+        <div class="col col--grid">
+          <div class="brands-work-types">
+            <span class="work-type-tag"><i class="fa-solid fa-mobile-screen"></i> Apps</span>
+            <span class="work-type-tag"><i class="fa-solid fa-server"></i> ERPs</span>
+            <span class="work-type-tag"><i class="fa-solid fa-chart-bar"></i> Dashboards</span>
+            <span class="work-type-tag"><i class="fa-solid fa-plug"></i> Integraciones</span>
+            <span class="work-type-tag"><i class="fa-solid fa-globe"></i> Sitios Web</span>
+          </div>
+          <div class="brands-grid">
+            <div class="brand-item">
+              <img src="/assets/trendly-logo.png" alt="Trendly">
+            </div>
+            <div class="brand-item">
+              <img src="/assets/operia-wordmark-emerald.png" alt="Operia">
+            </div>
+            <div class="brand-item">
+              <img src="/assets/operia-foods-color.png" alt="Operia Foods">
+            </div>
+            <div class="brand-item">
+              <img src="/assets/trendly-events-logo.png" alt="Trendly Events">
+            </div>
+            <div class="brand-item">
+              <img src="/assets/image.png" alt="Digital Com">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -541,7 +641,7 @@
         <div class="col col--grid">
     <ul class="results-grid">
       <li class="results-item">
-        <p class="results-number">+40</p>
+        <p class="results-number">+50</p>
         <p class="results-label">{{ 'results.metric1.label' | t }}</p>
       </li>
       <li class="results-item">
@@ -549,7 +649,7 @@
         <p class="results-label">{{ 'results.metric2.label' | t }}</p>
       </li>
       <li class="results-item">
-        <p class="results-number">+2000</p>
+        <p class="results-number">+6000</p>
         <p class="results-label">{{ 'results.metric3.label' | t }}</p>
       </li>
     </ul>
