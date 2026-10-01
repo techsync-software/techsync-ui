@@ -124,6 +124,17 @@
       background-color: rgba(255, 255, 255, 0.07);
     }
 
+    .link__icon--logo {
+      background-color: transparent;
+      overflow: hidden;
+    }
+
+    .link__icon--logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     .link__text {
       flex: 1 1 auto;
       min-width: 0;
@@ -308,6 +319,21 @@
         <span class="link__text">
           <span class="link__title">Diagnóstico gratis &middot; 20 min</span>
           <span class="link__subtitle">Escríbenos por WhatsApp</span>
+        </span>
+        <svg class="link__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="13 6 19 12 13 18" />
+        </svg>
+      </a>
+
+      <a class="link" href="https://appfynza.work/" target="_blank" rel="noopener noreferrer">
+        <span class="link__icon link__icon--logo" aria-hidden="true">
+          <img src="data:image/png;base64,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" width="168" height="168" alt="">
+        </span>
+        <span class="link__text">
+          <span class="link__title">Fynza, nuestra app</span>
+          <span class="link__subtitle">Finanzas personales &middot; iPhone</span>
         </span>
         <svg class="link__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
